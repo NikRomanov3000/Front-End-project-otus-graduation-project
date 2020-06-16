@@ -8,8 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
-import DeleteButton from './Buttons/DeleteButton';
-import AddReceiptButton from './Buttons/AddReceiptButton';
+import DeleteButton from './DeleteButton';
+import AddReceiptButton from './AddReceiptButton';
 
 const API_URL = '/api/address';
 

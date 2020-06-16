@@ -8,8 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
-import DeleteButton from './Buttons/DeleteButton';
-import AddAddressButton from './Buttons/AddAddressButton';
+import DeleteButton from './DeleteButton';
+import AddAddressButton from './AddAddressButton';
 
 
 

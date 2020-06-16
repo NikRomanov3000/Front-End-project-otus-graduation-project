@@ -7,18 +7,17 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 
-const API_URL = '/api/person';
+const API_URL = '/api/payment';
 
-class AddPersonForm extends React.Component{
+class AddPaymentForm extends React.Component{
     constructor(props){
         super(props)
 
         this.state = {
-            name:'',
-            passportSerial: '',
-            passportNumber: ''
-        };
-        
+
+            receiptId: '',
+            amount:''                          
+        }
     }    
       changeHandler =(e)=>{
         this.setState({[e.target.name]: e.target.value})
@@ -31,34 +30,31 @@ class AddPersonForm extends React.Component{
     }
     
   render(){
-      const { name, passportSerial, passportNumber } = this.state
+      const { receiptId, amount } = this.state
     return (        
         <form  noValidate autoComplete="off" onSubmit={this.submitHandler}>
             <div>
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" >
-                        Add Person
+                        Add payment
                     </Typography>
                 </Toolbar>
             </AppBar>
       </div>
        
-        <div>
-        <TextField label="Full person name" type="text" name="name" value={name} onChange={this.changeHandler}/>
+       <div>
+        <TextField label="Receipt Id" type="text" name="receiptId" value={receiptId} onChange={this.changeHandler}/>
         </div>
 
         <div>
-        <TextField label="Passport serial" type="number" name="passportSerial" value={passportSerial} onChange={this.changeHandler}/>
+        <TextField label="Amount" type="text" name="amount" value={amount} onChange={this.changeHandler}/>
         </div>
-        
-        <div>
-        <TextField label="Passport number" type="number" name="passportNumber" value={passportNumber} onChange={this.changeHandler}/>
-        </div>
+      
         <br/> 
         <div>
         <Button type="submit" variant="contained" color="primary">
-            Add person 
+            Add payment 
         </Button>
         </div>              
       </form>
@@ -66,4 +62,4 @@ class AddPersonForm extends React.Component{
   }
 }
 
-export default AddPersonForm;
+export default AddPaymentForm;
