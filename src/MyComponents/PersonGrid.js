@@ -13,7 +13,7 @@ import AddAddressButton from './AddAddressButton';
 
 
 
-const API_URL = '/api/person';
+const API_URL = 'http://localhost:8080/api/person';
 
 class PersonGrid extends React.Component{
   state = {

@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 
-const API_URL = '/api/person';
+const API_URL = 'http://localhost:8080/api/person';
 
 class AddPersonForm extends React.Component{
     constructor(props){

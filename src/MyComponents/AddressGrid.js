@@ -11,7 +11,7 @@ import axios from 'axios';
 import DeleteButton from './DeleteButton';
 import AddReceiptButton from './AddReceiptButton';
 
-const API_URL = '/api/address';
+const API_URL = 'http://localhost:8080/api/address';
 
 class AddressGrid extends React.Component{
   state = {

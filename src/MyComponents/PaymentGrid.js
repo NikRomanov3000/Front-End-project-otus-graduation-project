@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import axios from 'axios';
 import DeleteButton from './DeleteButton';
 
-const API_URL = '/api/payment';
+const API_URL = 'http://localhost:8081/api/payment';
 
 class PaymentGrid extends React.Component{
   state = {

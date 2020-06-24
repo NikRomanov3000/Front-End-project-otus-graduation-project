@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import axios from 'axios';
 
-const API_URL = '/api/person/';
+const API_URL = 'http://localhost:8080/api/person/';
 
 class DeleteButton extends React.Component{
 

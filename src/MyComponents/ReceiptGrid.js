@@ -11,7 +11,7 @@ import axios from 'axios';
 import DeleteButton from './DeleteButton';
 import AddPaymentButton from './AddPaymentButton';
 
-const API_URL = '/api/receipt';
+const API_URL = 'http://localhost:8080/api/receipt';
 
 class ReceiptGrid extends React.Component{
   state = {
@@ -58,7 +58,18 @@ class ReceiptGrid extends React.Component{
                 <TableCell align="right">{receipt.addressId}</TableCell>   
                 <TableCell align="right">{receipt.debtAmount}</TableCell>   
                 <TableCell align="right">{receipt.activeAmount}</TableCell>   
-                <TableCell align="right">{receipt.receiptStatus}</TableCell>   
+                <TableCell align="right">
+                {(() => {
+        switch (receipt.receiptStatus) {
+          case 1:   return "Not Paid";
+          case 2: return "Part Paid";
+          case 3:  return "Full Paid";
+          default:      return null;
+        }
+      })()}
+                  
+                 
+                </TableCell>   
                 <TableCell align="right">{receipt.dispatchDate}</TableCell>
                 <TableCell>
                   <DeleteButton onClick={()=>{ this.removeReceipt(receipt) }}>

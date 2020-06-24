@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 
-const API_URL = '/api/payment';
+const API_URL = 'http://localhost:8081/api/payment';
 
 class AddPaymentForm extends React.Component{
     constructor(props){
